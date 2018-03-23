@@ -51,10 +51,7 @@ ADD config/fpm/www.conf /etc/php/7.0/fpm/pool.d/www.conf
 # Supervisor conf
 ADD config/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Add phpinfo script for INFO purposes
-RUN echo "<?php phpinfo();" >> /var/www/html/index.php
-
-WORKDIR /var/www/html/
+WORKDIR /srv/www
 
 # Create socker
 RUN mkdir -p /run/php
