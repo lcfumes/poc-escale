@@ -11,8 +11,10 @@ escale:
 
 database:
     image: mariadb:latest
+    volumes:
+      - ./data/db:/var/lib/mysql
     environment:
-        - MYSQL_ROOT_PASSWORD=root
-        - VIRTUAL_HOST=database.local
+      - MYSQL_ROOT_PASSWORD=root
+      - VIRTUAL_HOST=database.local
     ports:
         - "3306:3306"
