@@ -26,6 +26,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y --fix-missing install php7.0 \
       nano \
       lynx-cur
 
+# Install Mysql
+RUN apt-get -y install mysql-client
+
 # Install supervisor
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y --fix-missing install supervisor
 RUN mkdir -p /var/log/supervisor
