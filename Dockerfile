@@ -57,7 +57,7 @@ WORKDIR /var/www/html/
 RUN mkdir -p /run/php
 
 # Volume
-VOLUME /var/www/html
+VOLUME /srv/www
 
 # Ports: nginx
 EXPOSE 80
