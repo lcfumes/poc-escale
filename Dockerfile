@@ -13,6 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y --fix-missing install php7.0 \
       php7.0-gd \
       php7.0-json \
       php7.0-mbstring \
+      php7.0-mysql \
       php7.0-xml \
       php7.0-xsl \
       php7.0-zip \
