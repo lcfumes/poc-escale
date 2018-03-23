@@ -1,0 +1,18 @@
+escale:
+  build: "./"
+  ports:
+      - "80:80"
+  volumes:
+      - ./:/srv/www
+  environment:
+      - VIRTUAL_HOST=escale.local
+  links:
+       - database:database.local
+
+database:
+    image: mariadb:latest
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - VIRTUAL_HOST=database.local
+    ports:
+        - "3306:3306"
